@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.mycompany.zhutingxuanbaodalihuan" >
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="朱廷轩暴打李焕"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".MainActivity"
+			android:launchMode="singleTask"
+			android:screenOrientation="landscape">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+		<activity
+			android:theme="@android:style/Theme.Holo.Light"
+			android:name=".xml1"
+			android:screenOrientation="portrait"/>
+		<activity
+			android:theme="@android:style/Theme.Holo.Light"
+			android:name=".xml2"
+			android:screenOrientation="landscape"/>
+		<activity
+			android:theme="@android:style/Theme.Holo.Light"
+			android:name=".xml3"
+			android:screenOrientation="landscape"/>
+		<activity
+			android:theme="@android:style/Theme.Holo.Light"
+			android:name=".xml4"
+			android:screenOrientation="landscape"/>
+    </application>
+
+</manifest>
