@@ -13,6 +13,6 @@ public class xml4 extends Activity
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.xml2);
+        setContentView(R.layout.xml4);
 	}
 }

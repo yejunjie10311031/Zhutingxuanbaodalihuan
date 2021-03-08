@@ -17,6 +17,17 @@ public class xml3 extends Activity
         setContentView(R.layout.xml3);
 		
 	}
+	public int health1=30;
+	public void fight (View view) 
+    {
+		health1=health1-3;
+		if(health1==0)
+		{
+		finish();
+    	Intent intent = new Intent(this,xml4.class);
+    	startActivity(intent);
+		}
+	}
 	public void tiaozhuan ()
 	{
 		try
