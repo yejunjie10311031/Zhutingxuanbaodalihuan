@@ -61,7 +61,7 @@
 			android:layout_marginLeft="20dp"
 			android:layout_marginTop="120dp"
 			android:width="30dp"
-			android:height="40dp"
+			android:height="30dp"
 			android:onClick="left"/>
 		<Button
 			android:layout_width="wrap_content"
@@ -70,7 +70,7 @@
 			android:layout_marginLeft="140dp"
 			android:layout_marginTop="120dp"
 			android:width="30dp"
-			android:height="40dp"
+			android:height="30dp"
 			android:onClick="right"/>
 		<Button
 			android:layout_width="wrap_content"
@@ -79,7 +79,7 @@
 			android:layout_marginLeft="80dp"
 			android:layout_marginTop="80dp"
 			android:width="30dp"
-			android:height="40dp"
+			android:height="30dp"
 			android:onClick="up"/>
 		<Button
 			android:layout_width="wrap_content"
@@ -88,8 +88,17 @@
 			android:layout_marginLeft="80dp"
 			android:layout_marginTop="160dp"
 			android:width="30dp"
-			android:height="40dp"
+			android:height="30dp"
 			android:onClick="down"/>
+		<Button
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="攻击"
+			android:layout_marginLeft="500dp"
+			android:layout_marginTop="120dp"
+			android:width="60dp"
+			android:height="40dp"
+			android:onClick="fight"/>
 
 	</RelativeLayout>
 

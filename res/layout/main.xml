@@ -6,31 +6,47 @@
 	android:gravity="center"
 	android:background="@drawable/image_1"
 	android:orientation="vertical">
-	
-    <TextView
-		android:layout_width="wrap_content"
-		android:layout_height="wrap_content"
-		android:text="朱廷轩暴打李焕"
-		android:textAppearance="?android:attr/textAppearanceLarge"/>
-	
-	<Button
-		android:layout_width="wrap_content"
-		android:layout_height="wrap_content"
-		android:onClick="click2"
-		android:text="开始游戏"/>
 
-	<Button
-		android:layout_width="wrap_content"
-		android:layout_height="wrap_content"
-		android:onClick="click3"
-		android:text="关于"/>
+	<RelativeLayout
+		android:layout_width="fill_parent"
+		android:layout_height="fill_parent"
+		android:orientation="vertical">
 
-	<Button
-		android:id="@+id/mainButton1"
-		android:onClick="click1"
-		android:layout_width="wrap_content"
-		android:layout_height="wrap_content"
-		android:text="退出"/>
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="朱廷轩暴打李焕"
+			android:textAppearance="?android:attr/textAppearanceLarge"
+			android:layout_marginLeft="245dp"
+			android:layout_marginTop="50dp"
+			android:textColor="#F50629"/>
+
+		<Button
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:onClick="click2"
+			android:text="开始游戏"
+			android:layout_marginLeft="265dp"
+			android:layout_marginTop="100dp"/>
+
+		<Button
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:onClick="click3"
+			android:text="关于"
+			android:layout_marginLeft="265dp"
+			android:layout_marginTop="160dp"/>
+
+		<Button
+			android:id="@+id/mainButton1"
+			android:onClick="click1"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="退出"
+			android:layout_marginLeft="265dp"
+			android:layout_marginTop="220dp"/>
+
+	</RelativeLayout>
 
 </LinearLayout>
 
