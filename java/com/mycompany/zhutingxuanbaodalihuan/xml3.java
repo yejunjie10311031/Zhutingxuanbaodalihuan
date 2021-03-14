@@ -21,14 +21,18 @@ public class xml3 extends Activity
 		final ImageView image3 = (ImageView) findViewById(R.id.image3);
 		final ImageView image4 = (ImageView) findViewById(R.id.image4);
 		final TextView text1=(TextView) findViewById(R.id.text1);
+		final TextView text2=(TextView) findViewById(R.id.text2);
+		final TextView text3=(TextView) findViewById(R.id.text3);
         Button button1 = (Button) findViewById(R.id.button1);
 		Button button2 = (Button) findViewById(R.id.button2);
 		Button button3 = (Button) findViewById(R.id.button3);
 		Button button4 = (Button) findViewById(R.id.button4);
 		Button button5 = (Button) findViewById(R.id.button5);
 		final weizhi wz1=new weizhi();
-		image1.setX(1);
-		image4.setX(1);
+		image1.setX(0);
+		image4.setX(0);
+		image1.setY(0);
+		image4.setY(0);
         button1.setOnClickListener(new OnClickListener() {
         
 				@Override
@@ -99,8 +103,10 @@ public class xml3 extends Activity
 					}
 				}
 				else sm1=sm1+0;
+				text2.setText("李焕生命值:"+"  "+sm1);
 				}
 			});
+			final int health2=40;
 		new Thread()
 		{
 			public void run()
@@ -108,6 +114,7 @@ public class xml3 extends Activity
 				while (true)
 				{
 					float p1=image4.getX()-image1.getX();
+					float p2=image1.getY()-image4.getY();
 					if(p1>=80)
 					{
 						try
@@ -132,6 +139,47 @@ public class xml3 extends Activity
 
 						}
 					}
+					if (p2<=-60)
+					{
+						try
+						{
+							image4.setY(image4.getY()-20);
+							Thread.sleep(500);
+						}
+						catch (InterruptedException e)
+						{
+
+						}
+					}
+					if (p2>=60)
+					{
+						try
+						{
+							image4.setY(image4.getY()+20);
+							Thread.sleep(500);
+						}
+						catch (InterruptedException e)
+						{
+
+						}
+					}
+					if(p1<=100&&p2>=-100&&p2<=100&&p2>=-100)
+					{
+						try
+						{
+							Thread.sleep(300);
+						float sm2=health2-4;
+						if (sm2==0)
+						{
+							fight();
+						}
+						else sm2=sm2+0;
+						}
+						catch (InterruptedException e)
+						{
+
+						}
+					}
 				}
 			}
 		}.start();
@@ -146,25 +194,6 @@ public class xml3 extends Activity
 		public int w4=100;
 		public int w5=1000;
 		public int w6=150;
-			public void yd1()
-		{
-			int p1=w5-w1;
-			int p2=w6-w3;
-			if(p1>=80)
-			{
-				while(true)
-				{
-					try
-					{
-						TimeUnit.SECONDS.sleep(1);
-					}
-					catch (InterruptedException e)
-					{
-						w5=w5-18;
-					}
-				}
-				}
-			}
 		}
 		
 	public int health1=30;
