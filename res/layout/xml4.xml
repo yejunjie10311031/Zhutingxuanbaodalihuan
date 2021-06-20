@@ -18,5 +18,11 @@
 		android:text="朱廷轩成功杀死了李焕"
 		android:textAppearance="?android:attr/textAppearanceLarge"/>
 
+	<Button
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text="返回"
+        android:onClick="c1"/>
+
 </LinearLayout>
 
