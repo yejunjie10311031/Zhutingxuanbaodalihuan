@@ -15,4 +15,10 @@ public class xml4 extends Activity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.xml4);
 	}
+    public void c1 (View view) 
+    {
+        finish();
+        Intent intent = new Intent(this,MainActivity.class);
+        startActivity(intent);
+	}
 }

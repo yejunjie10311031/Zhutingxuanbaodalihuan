@@ -20,6 +20,7 @@ public class xml3 extends Activity
 		final ImageView image2 = (ImageView) findViewById(R.id.image2);
 		final ImageView image3 = (ImageView) findViewById(R.id.image3);
 		final ImageView image4 = (ImageView) findViewById(R.id.image4);
+        final ImageView image5 = (ImageView) findViewById(R.id.image5);
 		final TextView text1=(TextView) findViewById(R.id.text1);
 		final TextView text2=(TextView) findViewById(R.id.text2);
 		final TextView text3=(TextView) findViewById(R.id.text3);
@@ -92,9 +93,9 @@ public class xml3 extends Activity
 				@Override
 				public void onClick(View p1)
 				{
-					float p2=image4.getX()-wz1.w2;
-					int p3=wz1.w3-wz1.w6;
-					if(p2<=120&&p2>=-120&&p3<=120&&p3>=-120)
+					float p2=image4.getX()-image3.getX();
+					float p3=image2.getY()-image4.getY();
+					if(p2<=120&&p2>=-120&&p3<=140&&p3>=-140)
 					{
 					sm1=sm1-3;
 					if (sm1==0)
@@ -115,11 +116,14 @@ public class xml3 extends Activity
 				{
 					float p1=image4.getX()-image1.getX();
 					float p2=image1.getY()-image4.getY();
+					float p3=wz1.w5-wz1.w1;
+					float p4=wz1.w3-wz1.w6;
 					if(p1>=80)
 					{
 						try
 						{
 							image4.setX(image4.getX()-18);
+                            image5.setX(image5.getX()-18);
 							Thread.sleep(500);
 						}
 						catch (InterruptedException e)
@@ -132,6 +136,7 @@ public class xml3 extends Activity
 						try
 						{
 							image4.setX(image4.getX()+18);
+                            image5.setY(image5.getY()+18);
 							Thread.sleep(500);
 						}
 						catch (InterruptedException e)
@@ -144,6 +149,7 @@ public class xml3 extends Activity
 						try
 						{
 							image4.setY(image4.getY()-20);
+                            image5.setY(image5.getY()-20);
 							Thread.sleep(500);
 						}
 						catch (InterruptedException e)
@@ -156,6 +162,7 @@ public class xml3 extends Activity
 						try
 						{
 							image4.setY(image4.getY()+20);
+                            image5.setY(image5.getY()+20);
 							Thread.sleep(500);
 						}
 						catch (InterruptedException e)
@@ -163,7 +170,7 @@ public class xml3 extends Activity
 
 						}
 					}
-					if(p1<=100&&p2>=-100&&p2<=100&&p2>=-100)
+					if(p3<=100&&p3>=-100&&p2<=100&&p2>=-100)
 					{
 						try
 						{
